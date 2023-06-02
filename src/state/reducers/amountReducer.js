@@ -1,0 +1,18 @@
+const initial = {
+    state:0
+} 
+ 
+ const amountReducer = (state = initial, action) => {
+    if (action.type === 'deposit') {
+        return state + action.payload
+    }
+    else if (action.type === 'withdraw') {
+        return state - action.payload
+    }
+    else {
+        return state;
+    }
+
+
+}
+export default amountReducer;
